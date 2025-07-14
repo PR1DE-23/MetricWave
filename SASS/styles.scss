@@ -1,0 +1,45 @@
+@import 'generales';
+@import 'variables';
+@import 'mixins';
+
+body{
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+.wrapper{
+  min-height: 100vh;
+  margin-inline: auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header{
+  width: 100%;
+}
+
+.header-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+}
+
+.site-title{
+  text-align: center;
+  @include font-set($font-sm, $lh-sm);
+}
+
+.header-bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu{
+  display: flex;
+  gap: 2rem;
+}
