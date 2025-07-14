@@ -1,45 +1,48 @@
-@import 'generales';
-@import 'variables';
-@import 'mixins';
+@use 'generales' as g;
+@use 'variables' as v;
+@use 'mixins' as m;
 
-body{
-  background-color: $color-bg;
-  color: $color-text;
+body {
+  background-color: v.$color-bg;
+  color: v.$color-text;
+  font-family: v.$main-font;
 }
 
-.wrapper{
+.wrapper {
   min-height: 100vh;
+  max-width: 1200px;
+  padding: 2rem;
   margin-inline: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 
-header{
+header {
   width: 100%;
 }
 
-.header-inner{
+.header-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding-block: 1.5rem;
-  padding-inline: 2rem;
 }
 
-.site-title{
+.site-title {
   text-align: center;
-  @include font-set($font-sm, $lh-sm);
+  @include m.font-set(v.$font-md, v.$lh-sm);
 }
 
-.header-bottom{
+.header-bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: auto;
+  @include m.font-set(v.$font-sm, v.$lh-sm);
 }
 
-.nav-menu{
+.nav-menu {
   display: flex;
   gap: 2rem;
 }
