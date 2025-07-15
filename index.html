@@ -19,7 +19,7 @@
       <div class="header-inner">
         <h1 class="site-title">MetricWave</h1>
 
-        <div class="header-bottom">
+        <div class="header-bottom u-center">
           <nav class="nav-menu">
             <a href="">Analisis</a>
             <a href="">Herramientas</a>
@@ -28,27 +28,86 @@
       </div>
     </header>
 
-    <section class="intro-section">
+    <section class="intro-section u-vertical-content">
       <div class="intro-img">
-        <img src="" alt="Presentacion vosial del sitio">
+        <img src="img/poema.png" alt="Presentacion visual del sitio">
       </div>
       <div class="intro-content">
-        <h1>Analisis Metrico y Literario</h1>
-        <p>Este sitio te permite explorar la métrica poética, la rima y las figuras retóricas de cada verso.
+        <h2>Analisis Metrico y Literario.</h2>
+        <p>Explora la métrica poética, la rima y las figuras retóricas en cada verso.<br>
           Compara estructuras, visualiza licencias métricas y comprende el ritmo literario de forma interactiva.</p>
-        <p>Ideal para estudiantes, editores, escritores y amantes de la poesía que buscan una herramienta clara, técnica
-          y dinámica.</p>
       </div>
     </section>
 
-    <main>
-      <section id="editor">
-      </section>
+    <main class="u-vertical-content">
+      <!-- Panel de metricas -->
+      <aside class="metrics-panel u-vertical-content">
+        <div class="metric-toggle">
+          <button class="u-btn-active">Vista General</button>
+          <button class="u-btn-inactive">Vista Detallada</button>
+        </div>
+        <!-- metrica general -->
+        <div class="metric-view metric-general">
+          <div class="metric-block">
+            <h4>Estrofas</h4>
+            <p>Total: 3</p>
+          </div>
 
-      <aside id="metrics">
+          <div class="metric-block">
+            <h4>Versos</h4>
+            <p>Total: 12</p>
+            <p>Promedio por estrofa: 4</p>
+          </div>
+
+          <div class="metric-block">
+            <h4>Rimas predominantes</h4>
+            <p>Asonantes: 2</p>
+            <p>Consonantes: 2</p>
+          </div>
+
+          <div class="metric-block">
+            <h4>Sinalefas</h4>
+            <p>Aplicadas: 9</p>
+            <p>Promedio por estrofa: 3</p>
+          </div>
+
+          <div class="metric-block">
+            <h4>licencias métricas</h4>
+            <p>Sineresis: 1</p>
+            <p>Dieresis: 2</p>
+          </div>
+
+        </div>
+        <!-- metrica detallada -->
+        <div class="metric-view metric-detalle">
+          <div class="mestrofa-metrics">
+            <h4>Estrofa 1</h4>
+            <ul>
+              <li>Versos: 2</li>
+              <li>Conteo silábico promedio: 11</li>
+              <li>Rima predominante: Asonante</li>
+              <li>Sinalefas aplicadas: 3</li>
+              <li>Licencias metricas: 1 sinéresis</li>
+            </ul>
+          </div>
+
+          <div class="mestrofa-metrics">
+            <h4>Estrofa 2</h4>
+            <ul>
+              <li>Versos: 2</li>
+              <li>Conteo silábico promedio: 11</li>
+              <li>Rima predominante: Consonante</li>
+              <li>Sinalefas aplicadas: 2</li>
+              <li>Licencias metricas: 1 dieéresis</li>
+            </ul>
+          </div>
+        </div>
       </aside>
-    </main>
+      <!-- Editor de texto -->
+      <section class="verse-editor" contenteditable="true">
 
+      </section>
+    </main>
     <section class="metric-info">
 
     </section>

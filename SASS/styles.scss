@@ -1,5 +1,6 @@
 @use 'generales' as g;
 @use 'variables' as v;
+@use 'utilities' as u;
 @use 'mixins' as m;
 
 body {
@@ -11,12 +12,15 @@ body {
 .wrapper {
   min-height: 100vh;
   max-width: 1200px;
-  padding: 2rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
   margin-inline: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  gap: 1rem;
 }
 
+// HEADER
 header {
   width: 100%;
 }
@@ -30,19 +34,50 @@ header {
 
 .site-title {
   text-align: center;
-  @include m.font-set(v.$font-md, v.$lh-sm);
+  color: white;
+  @include m.font-set(v.$font-sm, v.$lh-sm, 700);
 }
 
 .header-bottom {
+  color: white;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-inline: auto;
-  @include m.font-set(v.$font-sm, v.$lh-sm);
+  font-weight: 700;
 }
 
 .nav-menu {
   display: flex;
   gap: 2rem;
+}
+
+// INTRO
+.intro-section {
+  img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-inline: auto
+  }
+
+  h2 {
+    color: white;
+    @include m.font-set(v.$font-lg, v.$lh-lg);
+  }
+
+  p {
+    @include m.font-set(v.$font-xs, v.$lh-sm);
+  }
+}
+
+// MAIN
+
+.verse-editor {
+  border: 2px solid white;
+  border-radius: 1rem;
+  min-height: 300px;
+  padding: 1rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4)
+  }
 }

@@ -1,0 +1,32 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-vertical-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.u-horizontal-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.u-btn-active {
+  @include m.button-style();
+}
+
+.u-btn-inactive {
+  @include m.button-style($bg-color: v.$color-card1)
+}

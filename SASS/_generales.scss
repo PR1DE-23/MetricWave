@@ -5,13 +5,13 @@ html {
 
 *,
 *:before,
-*:after{
+*:after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   font-size: 1rem;
   color: black;
   line-height: 1;
@@ -31,8 +31,18 @@ a {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
   margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
 }
