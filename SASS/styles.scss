@@ -12,12 +12,12 @@ body {
 .wrapper {
   min-height: 100vh;
   max-width: 1200px;
-  padding-block: 1rem;
-  padding-inline: 2rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
   margin-inline: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 // HEADER
@@ -30,6 +30,10 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
 }
 
 .site-title {
@@ -42,6 +46,13 @@ header {
   color: white;
   width: 100%;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 480px) {
+    justify-content: end;
+  }
 }
 
 .nav-menu {
@@ -52,10 +63,9 @@ header {
 // INTRO
 .intro-section {
   img {
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 530px;
     height: auto;
-    margin-inline: auto
   }
 
   h2 {
@@ -64,7 +74,7 @@ header {
   }
 
   p {
-    @include m.font-set(v.$font-xs, v.$lh-sm);
+    @include m.font-set(1.125rem, v.$lh-sm);
   }
 }
 

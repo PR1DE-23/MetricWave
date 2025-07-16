@@ -47,29 +47,29 @@ ol {
   list-style: none;
 }
 
-.u-hidden {
+.hidden {
   display: none !important;
 }
 
-.u-center {
+.center-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.u-vertical-content {
+.vertical-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.u-horizontal-content {
+.horizontal-content {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.u-btn-active {
+.btn-active {
   display: inline-block;
   padding: 0.75rem 1rem;
   background-color: #FFDB45;
@@ -81,14 +81,14 @@ ol {
   font-family: inherit;
   transition: backgrond-color 3s ease;
 }
-.u-btn-active:hover, .u-btn-active:focus {
+.btn-active:hover, .btn-active:focus {
   background-color: rgb(255, 209.1290322581, 18);
 }
-.u-btn-active:active {
+.btn-active:active {
   transform: translateY(1px);
 }
 
-.u-btn-inactive {
+.btn-inactive {
   display: inline-block;
   padding: 0.75rem 1rem;
   background-color: #A6E22E;
@@ -100,10 +100,10 @@ ol {
   font-family: inherit;
   transition: backgrond-color 3s ease;
 }
-.u-btn-inactive:hover, .u-btn-inactive:focus {
+.btn-inactive:hover, .btn-inactive:focus {
   background-color: rgb(138.3571428571, 194.0714285714, 26.9285714286);
 }
-.u-btn-inactive:active {
+.btn-inactive:active {
   transform: translateY(1px);
 }
 
@@ -116,12 +116,12 @@ body {
 .wrapper {
   min-height: 100vh;
   max-width: 1200px;
-  padding-block: 1rem;
-  padding-inline: 2rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
   margin-inline: auto;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 header {
@@ -133,6 +133,11 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+@media (min-width: 480px) {
+  .header-inner {
+    flex-direction: row;
+  }
 }
 
 .site-title {
@@ -147,6 +152,14 @@ header {
   color: white;
   width: 100%;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 480px) {
+  .header-bottom {
+    justify-content: end;
+  }
 }
 
 .nav-menu {
@@ -155,10 +168,9 @@ header {
 }
 
 .intro-section img {
-  width: 100%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 530px;
   height: auto;
-  margin-inline: auto;
 }
 .intro-section h2 {
   color: white;
@@ -167,7 +179,7 @@ header {
   font-weight: 400;
 }
 .intro-section p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 2rem;
   font-weight: 400;
 }
